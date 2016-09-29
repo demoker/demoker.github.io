@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-29T09:47:08.000Z</updated>
+  <updated>2016-09-29T10:23:30.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MicrometerLevelFormat</title>
+    <link href="http://demoker.co/2016/09/29/MicrometerLevelFormat/"/>
+    <id>http://demoker.co/2016/09/29/MicrometerLevelFormat/</id>
+    <published>2016-09-29T10:21:08.000Z</published>
+    <updated>2016-09-29T10:23:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
+<p>##使用方法：<br>1.添加UITextField+MicrometerLevelFormat到项目工程<br>2.在textField delegate方法中打开千分位功能即可，示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string&#123;</div><div class="line">    [textField openMicrometerLevelFormat];</div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>备注：textfiled的键盘类型必须是数字键盘，因为这里千分位的功能只对数字起作用。😁😁😁</p>
+<p><em>欢迎大家使用哟！多交流</em>  附上本人QQ：909352358</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##概述：&lt;br&gt;MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。&lt;a href=&quot;https://github.com/demoker/MicrometerLevelFormat&quot; target=&quot;_blank&quot; re
+    
+    </summary>
+    
+    
+      <category term="千分位 iOS UITextField" scheme="http://demoker.co/tags/%E5%8D%83%E5%88%86%E4%BD%8D-iOS-UITextField/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS Tips</title>

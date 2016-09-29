@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-29T09:38:24.000Z</updated>
+  <updated>2016-09-29T09:47:08.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://demoker.co/2016/09/29/iOS-Tips/"/>
     <id>http://demoker.co/2016/09/29/iOS-Tips/</id>
     <published>2016-09-29T09:35:10.000Z</published>
-    <updated>2016-09-29T09:38:24.000Z</updated>
+    <updated>2016-09-29T09:47:08.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="项目开发过程中遇到的bug总结"><a href="#项目开发过程中遇到的bug总结" class="headerlink" title="项目开发过程中遇到的bug总结"></a>项目开发过程中遇到的bug总结</h1><ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
@@ -90,11 +90,10 @@
 </li>
 </ol>
 </li>
-<li><p><strong>synx 同步iOS工程目录</strong></p>
-<pre><code>Xcode下面直接创建Group时在本地项目文件夹中并不会形成实体文    件夹，通过synx可以将Group目录同步。使用：
-1. 安装
-</code></pre><figure class="highlight plain"><figcaption><span>gem install synx```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">	2. 使用</div><div class="line">```synx your path</div></pre></td></tr></table></figure>
-<blockquote>
+<li><p><strong>synx 同步iOS工程目录</strong><br>Xcode下面直接创建Group时在本地项目文件夹中并不会形成实体文    件夹，通过synx可以将Group目录同步。使用：</p>
+<pre><code>1. 安装
+<figure class="highlight plain"><figcaption><span>gem install synx```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2. 使用</div><div class="line">```synx your path</div></pre></td></tr></table></figure>
+</code></pre><blockquote>
 <pre><code>CocoaPods管理的库要重新pod install一次，手动添加的    Framework也要重新添加。
 </code></pre></blockquote>
 </li>
@@ -103,7 +102,7 @@
 <p>解决方法：</p>
 <pre><code><figure class="highlight plain"><figcaption><span>-rf Pods```，删除工程目录下的pods文件夹，然后重新	 pod install，安装Realm的时候会慢一些，等了很长时间...解决方	 法	参考链接[🔗](https://github.com/realm/realm-cocoa/	 issues/2713)</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 </code></pre><p>curl <a href="https://static.realm.io/downloads/" target="_blank" rel="external">https://static.realm.io/downloads/</a>    core/realm-core-1.0.1.tar.bz2 -O<br>mkdir $TMPDIR/core_bin<br>mv realm-core-1.0.1.tar.bz2 $TMPDIR/core_bin</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">22. 子类是可以调用父类xib文件进行实例化的，例如LBWebViewController</div><div class="line">23. sublime 插件安装方法：[链接](https://packagecontrol.io/installation#st3)</div><div class="line">	  1.</div><div class="line">```ctrl+ `</div><div class="line">```,打开console，执行</div><div class="line">```simple</div><div class="line">```中的命令，即可</div><div class="line">	  2. 安装完</div><div class="line">```package control.sublime-package</div><div class="line">```,就可以安装其他插件了</div><div class="line">	  3.</div><div class="line">```shift＋command＋p</div><div class="line">``` 找到</div><div class="line">```install package</div><div class="line">```命令，回车，然后输入需要安装的插件名称，再回车就可以了</div><div class="line">24. realm pod 报错&apos;object_schema.hpp&apos; file not found</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">22. 子类是可以调用父类xib文件进行实例化的，例如LBWebViewController</div><div class="line">23. sublime 插件安装方法：[链接](https://packagecontrol.io/installation#st3)</div><div class="line">	  1.```ctrl+ ` ```,打开console，执行```simple```中的命令，即可</div><div class="line">	  2. 安装完```package control.sublime-package```,就可以安装其他插件了</div><div class="line">	  3.```shift＋command＋p``` 找到```install package```命令，回车，然后输入需要安装的插件名称，再回车就可以了</div><div class="line">24. realm pod 报错&apos;object_schema.hpp&apos; file not found</div></pre></td></tr></table></figure>
 <ol>
 <li>rm -rf Pods</li>
 <li>rm -rf ~/Library/Caches/CocoaPods<br>```</li>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-30T05:10:57.000Z</updated>
+  <updated>2016-09-30T07:42:31.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -16,13 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>404 Not Found：该页无法显示</title>
+    <link href="http://demoker.co/2016/09/30//404/"/>
+    <id>http://demoker.co/2016/09/30//404/</id>
+    <published>2016-09-30T07:41:26.000Z</published>
+    <updated>2016-09-30T07:42:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>马东凯。。。。。。<br>
+<div id="player1" class="dplayer"></div>
+<script src="dist/DPlayer.min.js"></script><!-- use your path -->
+<script>
+var option = {
+    element: document.getElementById('player1'),                       // Optional, player element
+    autoplay: false,                                                   // Optional, autoplay video, not supported by mobile browsers
+    theme: '#FADFA3',                                                  // Optional, theme color, default: #b7daff
+    loop: true,                                                        // Optional, loop play music, default: true
+    lang: 'zh',                                                        // Optional, language, `zh` for Chinese, `en` for English, default: Navigator language
+    screenshot: true,                                                  // Optional, enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin
+    hotkey: true,                                                      // Optional, binding hot key, including left right and Space, default: true
+    preload: 'auto',                                                   // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    video: {                                                           // Required, video info
+        url: 'http://devtest.qiniudn.com/若能绽放光芒.mp4',                                         // Required, video url
+        pic: 'http://devtest.qiniudn.com/若能绽放光芒.png'                                          // Optional, music picture
+    },
+    danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku
+        id: '9E2E3368B56CDBB4',                                        // Required, danmaku id, NOTICE: it must be unique, can not use these in your new player: `https://dplayer.daoapp.io/list`
+        api: 'https://dplayer.daoapp.io/',                             // Required, danmaku api
+        token: 'tokendemo',                                            // Optional, danmaku token for api
+        maximum: 1000                                                  // Optional, maximum quantity of danmaku
+    }
+}
+var dp = new DPlayer(option);
+</script>
+</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;马东凯。。。。。。&lt;br&gt;
+&lt;div id=&quot;player1&quot; class=&quot;dplayer&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;dist/DPlayer.min.js
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>自动打包，上传服务器</title>
     <link href="http://demoker.co/2016/09/29/AutoPackage/"/>
     <id>http://demoker.co/2016/09/29/AutoPackage/</id>
     <published>2016-09-29T10:27:51.000Z</published>
     <updated>2016-09-30T05:10:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p>1.配置：在工程所在目录下PackageShell文件夹，其中包括一个package文件夹（存放打包后的相关文件）、PackageConfig文件夹（其中存放app的相关配置.plist）</p>
+    <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>1.配置：在工程所在目录下PackageShell文件夹，其中包括一个package文件夹（存放打包后的相关文件）、PackageConfig文件夹（其中存放app的相关配置.plist）</p>
 <p>2.运行.sh脚本：进入到所在文件夹下，然后./name.sh 敲回车，这样就运行了</p>
 <p>3.脚本content：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">profile_Name=`/usr/libexec/PlistBuddy -c &quot;print profile_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">ipa_Name=`/usr/libexec/PlistBuddy -c &quot;print app_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">cd ../xxprojectName</div><div class="line">echo &quot;go to xxprojectName workspace path&quot;</div><div class="line">#</div><div class="line">#buildDay=$(date +%Y%m%d)</div><div class="line">buildTime=$(date +%Y%m%d%H%M)</div><div class="line">profile=&quot;$&#123;profile_Name&#125;&quot;</div><div class="line">echo $profile $ipa_Name</div><div class="line">if [ ! -d &quot;../PackageShell/Package&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction/QA</div><div class="line">echo &quot;Create ArchiveProduction path&quot;</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa/QA</div><div class="line">echo &quot;Create ipa path&quot;</div><div class="line">fi</div><div class="line">#</div><div class="line">buildConfiguration=&quot;QA&quot;</div><div class="line">buildPath=&quot;../PackageShell/Package/ArchiveProduction/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.xcarchive&quot;</div><div class="line">#ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.ipa&quot;</div><div class="line">ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;.ipa&quot;</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; clean</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; archive -archivePath $&#123;buildPath&#125;</div><div class="line">xcodebuild -exportArchive -exportFormat IPA -archivePath $&#123;buildPath&#125; -exportPath $&#123;ipaName&#125; -exportProvisioningProfile &quot;$profile&quot;</div></pre></td></tr></table></figure></p>
 <p>4.针对部署下面进行研究：</p>
@@ -66,7 +113,7 @@
     <published>2016-09-29T10:21:08.000Z</published>
     <updated>2016-09-30T05:11:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
+    <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
 <a id="more"></a>
 <p>##使用方法：<br>1.添加UITextField+MicrometerLevelFormat到项目工程<br>2.在textField delegate方法中打开千分位功能即可，示例代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string&#123;</div><div class="line">    [textField openMicrometerLevelFormat];</div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -81,9 +128,9 @@
     </summary>
     
     
-      <category term="千分位" scheme="http://demoker.co/tags/%E5%8D%83%E5%88%86%E4%BD%8D/"/>
-    
       <category term="iOS" scheme="http://demoker.co/tags/iOS/"/>
+    
+      <category term="千分位" scheme="http://demoker.co/tags/%E5%8D%83%E5%88%86%E4%BD%8D/"/>
     
       <category term="UITextField" scheme="http://demoker.co/tags/UITextField/"/>
     
@@ -96,7 +143,7 @@
     <published>2016-09-29T09:35:10.000Z</published>
     <updated>2016-09-30T05:11:34.000Z</updated>
     
-    <content type="html"><![CDATA[<ol>
+    <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
 <li><strong>DZNEmptyDataSet使用心得</strong><br> 同mj刷新一起使用的时候，一定要先endrefresh方法，然后再去刷新tableview，因为DZNEmptyDataSet是在reload数据的时候获取tableview的偏移和bounds，然后去设置空视图的位置的，如果先reload，则会导致空视图空视图显示出来的时候往上偏了54像素，54从哪里冒出来的呢？全局搜了一下，发现mj刷新正在pulling的时候正好54。 <a id="more"></a></li>
 <li>个人认为开发中涉及到<strong>系统权限</strong>的应该统一放在一起，放在一个文件中。</li>

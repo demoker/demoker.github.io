@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-30T07:48:57.000Z</updated>
+  <updated>2016-09-30T08:16:11.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://demoker.co/2016/09/30//404/"/>
     <id>http://demoker.co/2016/09/30//404/</id>
     <published>2016-09-30T07:41:26.000Z</published>
-    <updated>2016-09-30T07:48:57.000Z</updated>
+    <updated>2016-09-30T08:16:11.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>马东凯。。。。。。<br>
 <div id="player1" class="dplayer"></div>
@@ -36,7 +36,7 @@ var option = {
     hotkey: true,                                                      // Optional, binding hot key, including left right and Space, default: true
     preload: 'auto',                                                   // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
     video: {                                                           // Required, video info
-        url: 'https://youtu.be/4hPKqVKKtG8?t=23',                                         // Required, video url
+        url: 'http://ips.ifeng.com/video19.ifeng.com/video06/2012/08/01/04822d91-7751-406e-b338-0f978f74920d.mp4',                                         // Required, video url
         pic: 'http://devtest.qiniudn.com/若能绽放光芒.png'                                          // Optional, music picture
     },
     danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku

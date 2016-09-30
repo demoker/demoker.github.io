@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-30T03:47:16.000Z</updated>
+  <updated>2016-09-30T05:10:57.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://demoker.co/2016/09/29/AutoPackage/"/>
     <id>http://demoker.co/2016/09/29/AutoPackage/</id>
     <published>2016-09-29T10:27:51.000Z</published>
-    <updated>2016-09-30T03:47:16.000Z</updated>
+    <updated>2016-09-30T05:10:57.000Z</updated>
     
     <content type="html"><![CDATA[<p>1.配置：在工程所在目录下PackageShell文件夹，其中包括一个package文件夹（存放打包后的相关文件）、PackageConfig文件夹（其中存放app的相关配置.plist）</p>
 <p>2.运行.sh脚本：进入到所在文件夹下，然后./name.sh 敲回车，这样就运行了</p>
@@ -53,7 +53,9 @@
     </summary>
     
     
-      <category term="自动打包 ipa" scheme="http://demoker.co/tags/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85-ipa/"/>
+      <category term="自动打包" scheme="http://demoker.co/tags/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85/"/>
+    
+      <category term="ipa" scheme="http://demoker.co/tags/ipa/"/>
     
   </entry>
   
@@ -62,7 +64,7 @@
     <link href="http://demoker.co/2016/09/29/MicrometerLevelFormat/"/>
     <id>http://demoker.co/2016/09/29/MicrometerLevelFormat/</id>
     <published>2016-09-29T10:21:08.000Z</published>
-    <updated>2016-09-30T03:45:29.000Z</updated>
+    <updated>2016-09-30T05:11:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
 <a id="more"></a>
@@ -79,7 +81,11 @@
     </summary>
     
     
-      <category term="千分位 iOS UITextField" scheme="http://demoker.co/tags/%E5%8D%83%E5%88%86%E4%BD%8D-iOS-UITextField/"/>
+      <category term="iOS" scheme="http://demoker.co/tags/iOS/"/>
+    
+      <category term="千分位" scheme="http://demoker.co/tags/%E5%8D%83%E5%88%86%E4%BD%8D/"/>
+    
+      <category term="UITextField" scheme="http://demoker.co/tags/UITextField/"/>
     
   </entry>
   

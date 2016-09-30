@@ -86,7 +86,7 @@
     <link href="http://demoker.co/2016/09/29/iOS-Tips/"/>
     <id>http://demoker.co/2016/09/29/iOS-Tips/</id>
     <published>2016-09-29T09:35:10.000Z</published>
-    <updated>2016-09-30T02:25:14.000Z</updated>
+    <updated>2016-09-30T02:26:17.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="项目开发过程中遇到的bug总结"><a href="#项目开发过程中遇到的bug总结" class="headerlink" title="项目开发过程中遇到的bug总结"></a>项目开发过程中遇到的bug总结</h1><ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
@@ -161,7 +161,7 @@
 <figure class="highlight plain"><figcaption><span>gem install synx```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 使用</div><div class="line">```synx your path</div></pre></td></tr></table></figure>
 </code></pre></li>
 </ol>
-<pre><code>&gt;     CocoaPods管理的库要重新pod install一次，手动添加的    Framework也要重新添加。
+<pre><code>&gt;     CocoaPods管理的库要重新pod install一次，手动添加的            Framework也要重新添加。
 </code></pre><ol>
 <li><p>Realm pod install 失败</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[!] /bin/bash -c</div><div class="line">set -e</div><div class="line">sh build.sh cocoapods-setup</div><div class="line"></div><div class="line">core is not a symlink. Deleting...</div><div class="line">Downloading dependency: core 1.0.1</div><div class="line">Downloading core failed:</div><div class="line">curl: (56) SSLRead() return error -36</div></pre></td></tr></table></figure>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-30T01:30:59.000Z</updated>
+  <updated>2016-09-30T03:47:16.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://demoker.co/2016/09/29/AutoPackage/"/>
     <id>http://demoker.co/2016/09/29/AutoPackage/</id>
     <published>2016-09-29T10:27:51.000Z</published>
-    <updated>2016-09-30T01:30:59.000Z</updated>
+    <updated>2016-09-30T03:47:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>1.配置：在工程所在目录下PackageShell文件夹，其中包括一个package文件夹（存放打包后的相关文件）、PackageConfig文件夹（其中存放app的相关配置.plist）</p>
 <p>2.运行.sh脚本：进入到所在文件夹下，然后./name.sh 敲回车，这样就运行了</p>
-<p>3.脚本content：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">profile_Name=`/usr/libexec/PlistBuddy -c &quot;print profile_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">ipa_Name=`/usr/libexec/PlistBuddy -c &quot;print app_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">cd ../xxprojectName</div><div class="line">echo &quot;go to xxprojectName workspace path&quot;</div><div class="line">#</div><div class="line">#buildDay=$(date +%Y%m%d)</div><div class="line">buildTime=$(date +%Y%m%d%H%M)</div><div class="line">profile=&quot;$&#123;profile_Name&#125;&quot;</div><div class="line">echo $profile $ipa_Name</div><div class="line">if [ ! -d &quot;../PackageShell/Package&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction/QA</div><div class="line">echo &quot;Create ArchiveProduction path&quot;</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa/QA</div><div class="line">echo &quot;Create ipa path&quot;</div><div class="line">fi</div><div class="line">#</div><div class="line">buildConfiguration=&quot;QA&quot;</div><div class="line">buildPath=&quot;../PackageShell/Package/ArchiveProduction/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.xcarchive&quot;</div><div class="line">#ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.ipa&quot;</div><div class="line">ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;.ipa&quot;</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; clean</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; archive -archivePath $&#123;buildPath&#125;</div><div class="line">xcodebuild -exportArchive -exportFormat IPA -archivePath $&#123;buildPath&#125; -exportPath $&#123;ipaName&#125; -exportProvisioningProfile &quot;$profile&quot;</div></pre></td></tr></table></figure></p>
+<p>3.脚本content：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">profile_Name=`/usr/libexec/PlistBuddy -c &quot;print profile_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">ipa_Name=`/usr/libexec/PlistBuddy -c &quot;print app_Name&quot; ./PackageConfig/xx.plist`</div><div class="line">cd ../xxprojectName</div><div class="line">echo &quot;go to xxprojectName workspace path&quot;</div><div class="line">#</div><div class="line">#buildDay=$(date +%Y%m%d)</div><div class="line">buildTime=$(date +%Y%m%d%H%M)</div><div class="line">profile=&quot;$&#123;profile_Name&#125;&quot;</div><div class="line">echo $profile $ipa_Name</div><div class="line">if [ ! -d &quot;../PackageShell/Package&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ArchiveProduction/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ArchiveProduction/QA</div><div class="line">echo &quot;Create ArchiveProduction path&quot;</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa</div><div class="line">fi</div><div class="line">if [ ! -d &quot;../PackageShell/Package/ipa/QA&quot; ]; then</div><div class="line">mkdir ../PackageShell/Package/ipa/QA</div><div class="line">echo &quot;Create ipa path&quot;</div><div class="line">fi</div><div class="line">#</div><div class="line">buildConfiguration=&quot;QA&quot;</div><div class="line">buildPath=&quot;../PackageShell/Package/ArchiveProduction/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.xcarchive&quot;</div><div class="line">#ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;_$&#123;buildTime&#125;.ipa&quot;</div><div class="line">ipaName=&quot;../PackageShell/Package/ipa/QA/$&#123;ipa_Name&#125;.ipa&quot;</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; clean</div><div class="line">xctool -workspace xxprojectName.xcworkspace -scheme xxprojectName -configuration $&#123;buildConfiguration&#125; archive -archivePath $&#123;buildPath&#125;</div><div class="line">xcodebuild -exportArchive -exportFormat IPA -archivePath $&#123;buildPath&#125; -exportPath $&#123;ipaName&#125; -exportProvisioningProfile &quot;$profile&quot;</div></pre></td></tr></table></figure></p>
 <p>4.针对部署下面进行研究：</p>
 <p>方式一：</p>
 <p>使用curl 上传文件，示例代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#上传到蒲公英</div><div class="line">curl -F &quot;file=@&quot;$&#123;ipaName&#125; \</div><div class="line">-F &quot;uKey=7a293adb2ae692594483b846bfc4ddc8&quot; \</div><div class="line">-F &quot;_api_key=9440f27246757ebc2b92286186b4690b&quot; \</div><div class="line">https://www.pgyer.com/apiv1/app/upload</div></pre></td></tr></table></figure></p>
@@ -47,7 +47,8 @@
     <summary type="html">
     
       &lt;p&gt;1.配置：在工程所在目录下PackageShell文件夹，其中包括一个package文件夹（存放打包后的相关文件）、PackageConfig文件夹（其中存放app的相关配置.plist）&lt;/p&gt;
-&lt;p&gt;2.运行.sh脚本：进入到所在文件夹下，然后./name.sh 敲回车
+&lt;p&gt;2.运行.sh脚本：进入到所在文件夹下，然后./name.sh 敲回车，这样就运行了&lt;/p&gt;
+&lt;p&gt;3.脚本content：&lt;br&gt;
     
     </summary>
     
@@ -61,9 +62,10 @@
     <link href="http://demoker.co/2016/09/29/MicrometerLevelFormat/"/>
     <id>http://demoker.co/2016/09/29/MicrometerLevelFormat/</id>
     <published>2016-09-29T10:21:08.000Z</published>
-    <updated>2016-09-30T03:36:04.000Z</updated>
+    <updated>2016-09-30T03:45:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
+<a id="more"></a>
 <p>##使用方法：<br>1.添加UITextField+MicrometerLevelFormat到项目工程<br>2.在textField delegate方法中打开千分位功能即可，示例代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string&#123;</div><div class="line">    [textField openMicrometerLevelFormat];</div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>备注：textfiled的键盘类型必须是数字键盘，因为这里千分位的功能只对数字起作用。😁😁😁</p>
@@ -72,7 +74,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;##概述：&lt;br&gt;MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。&lt;a href=&quot;https://github.com/demoker/MicrometerLevelFormat&quot; target=&quot;_blank&quot; re
+      &lt;p&gt;##概述：&lt;br&gt;MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。&lt;a href=&quot;https://github.com/demoker/MicrometerLevelFormat&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -86,11 +88,11 @@
     <link href="http://demoker.co/2016/09/29/iOS-Tips/"/>
     <id>http://demoker.co/2016/09/29/iOS-Tips/</id>
     <published>2016-09-29T09:35:10.000Z</published>
-    <updated>2016-09-30T02:56:03.000Z</updated>
+    <updated>2016-09-30T03:46:53.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="项目开发过程中遇到的bug总结"><a href="#项目开发过程中遇到的bug总结" class="headerlink" title="项目开发过程中遇到的bug总结"></a>项目开发过程中遇到的bug总结</h1><ol>
+    <content type="html"><![CDATA[<ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
-<li><strong>DZNEmptyDataSet使用心得</strong><br> 同mj刷新一起使用的时候，一定要先endrefresh方法，然后再去刷新tableview，因为DZNEmptyDataSet是在reload数据的时候获取tableview的偏移和bounds，然后去设置空视图的位置的，如果先reload，则会导致空视图空视图显示出来的时候往上偏了54像素，54从哪里冒出来的呢？全局搜了一下，发现mj刷新正在pulling的时候正好54。</li>
+<li><strong>DZNEmptyDataSet使用心得</strong><br> 同mj刷新一起使用的时候，一定要先endrefresh方法，然后再去刷新tableview，因为DZNEmptyDataSet是在reload数据的时候获取tableview的偏移和bounds，然后去设置空视图的位置的，如果先reload，则会导致空视图空视图显示出来的时候往上偏了54像素，54从哪里冒出来的呢？全局搜了一下，发现mj刷新正在pulling的时候正好54。 <a id="more"></a></li>
 <li>个人认为开发中涉及到<strong>系统权限</strong>的应该统一放在一起，放在一个文件中。</li>
 <li><p>CocoaLumberjack <strong>自定义logger</strong>输出样式</p>
 <ol>
@@ -181,8 +183,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;项目开发过程中遇到的bug总结&quot;&gt;&lt;a href=&quot;#项目开发过程中遇到的bug总结&quot; class=&quot;headerlink&quot; title=&quot;项目开发过程中遇到的bug总结&quot;&gt;&lt;/a&gt;项目开发过程中遇到的bug总结&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;iOS 
+      &lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;iOS app通过itunes共享文件&lt;/strong&gt;&lt;br&gt;在程序的配置文件中添加&lt;code&gt;Application supports iTunes file sharing&lt;/code&gt;,设置为YES；这里共享的是沙河的Document目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DZNEmptyDataSet使用心得&lt;/strong&gt;&lt;br&gt; 同mj刷新一起使用的时候，一定要先endrefresh方法，然后再去刷新tableview，因为DZNEmptyDataSet是在reload数据的时候获取tableview的偏移和bounds，然后去设置空视图的位置的，如果先reload，则会导致空视图空视图显示出来的时候往上偏了54像素，54从哪里冒出来的呢？全局搜了一下，发现mj刷新正在pulling的时候正好54。
     
     </summary>
     

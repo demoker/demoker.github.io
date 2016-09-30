@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://demoker.co/"/>
-  <updated>2016-09-30T08:16:11.000Z</updated>
+  <updated>2016-09-30T05:10:57.000Z</updated>
   <id>http://demoker.co/</id>
   
   <author>
@@ -14,53 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>404 Not Found：该页无法显示</title>
-    <link href="http://demoker.co/2016/09/30//404/"/>
-    <id>http://demoker.co/2016/09/30//404/</id>
-    <published>2016-09-30T07:41:26.000Z</published>
-    <updated>2016-09-30T08:16:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>马东凯。。。。。。<br>
-<div id="player1" class="dplayer"></div>
-<script src="dist/DPlayer.min.js"></script><!-- use your path -->
-<script>
-var option = {
-    element: document.getElementById('player1'),                       // Optional, player element
-    autoplay: false,                                                   // Optional, autoplay video, not supported by mobile browsers
-    theme: '#FADFA3',                                                  // Optional, theme color, default: #b7daff
-    loop: true,                                                        // Optional, loop play music, default: true
-    lang: 'zh',                                                        // Optional, language, `zh` for Chinese, `en` for English, default: Navigator language
-    screenshot: true,                                                  // Optional, enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin
-    hotkey: true,                                                      // Optional, binding hot key, including left right and Space, default: true
-    preload: 'auto',                                                   // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    video: {                                                           // Required, video info
-        url: 'http://ips.ifeng.com/video19.ifeng.com/video06/2012/08/01/04822d91-7751-406e-b338-0f978f74920d.mp4',                                         // Required, video url
-        pic: 'http://devtest.qiniudn.com/若能绽放光芒.png'                                          // Optional, music picture
-    },
-    danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku
-        id: '9E2E3368B56CDBB4',                                        // Required, danmaku id, NOTICE: it must be unique, can not use these in your new player: `https://dplayer.daoapp.io/list`
-        api: 'https://dplayer.daoapp.io/',                             // Required, danmaku api
-        token: 'tokendemo',                                            // Optional, danmaku token for api
-        maximum: 1000                                                  // Optional, maximum quantity of danmaku
-    }
-}
-var dp = new DPlayer(option);
-</script>
-</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;马东凯。。。。。。&lt;br&gt;
-&lt;div id=&quot;player1&quot; class=&quot;dplayer&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;dist/DPlayer.min.js
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>自动打包，上传服务器</title>

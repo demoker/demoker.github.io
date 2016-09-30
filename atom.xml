@@ -86,7 +86,7 @@
     <link href="http://demoker.co/2016/09/29/iOS-Tips/"/>
     <id>http://demoker.co/2016/09/29/iOS-Tips/</id>
     <published>2016-09-29T09:35:10.000Z</published>
-    <updated>2016-09-30T02:53:51.000Z</updated>
+    <updated>2016-09-30T02:56:03.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="项目开发过程中遇到的bug总结"><a href="#项目开发过程中遇到的bug总结" class="headerlink" title="项目开发过程中遇到的bug总结"></a>项目开发过程中遇到的bug总结</h1><ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
@@ -172,9 +172,7 @@
 </li>
 <li><p>子类是可以调用父类xib文件进行实例化的，例如LBWebViewController</p>
 </li>
-<li>realm pod 报错’object_schema.hpp’ file not found<pre><code>1. `rm -rf Pods`
-2. `rm -rf ~/Library/Caches/CocoaPods`
-</code></pre></li>
+<li>realm pod 报错’object_schema.hpp’ file not found<br>  1.<code>rm -rf Pods</code><br>  2.<code>rm -rf ~/Library/Caches/CocoaPods</code></li>
 <li>autorelease 是在runloop休息到下一次被唤醒之间被释放的</li>
 <li>runloop mode 包括4种，NSTimer默认被添加到defaultmode中，所以计时器滚动的时候不会动.子线程中NSTimer如果runloop在跑，那么计时器会走</li>
 <li>使用KVO监听数组<br>网上有许多大牛已经说得很详细了，这里就不多说了，放一个<a href="http://liumh.com/2015/08/22/ios-nsmutablearray-kvo/" target="_blank" rel="external">链接</a></li>

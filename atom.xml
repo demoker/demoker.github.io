@@ -86,7 +86,7 @@
     <link href="http://demoker.co/2016/09/29/iOS-Tips/"/>
     <id>http://demoker.co/2016/09/29/iOS-Tips/</id>
     <published>2016-09-29T09:35:10.000Z</published>
-    <updated>2016-09-30T02:28:24.000Z</updated>
+    <updated>2016-09-30T02:32:41.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="项目开发过程中遇到的bug总结"><a href="#项目开发过程中遇到的bug总结" class="headerlink" title="项目开发过程中遇到的bug总结"></a>项目开发过程中遇到的bug总结</h1><ol>
 <li><strong>iOS app通过itunes共享文件</strong><br>在程序的配置文件中添加<code>Application supports iTunes file sharing</code>,设置为YES；这里共享的是沙河的Document目录</li>
@@ -151,17 +151,15 @@
 <li><p>真机运行<br> 解决方法：在main.m或者.pch中添加👇代码:</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#ifdef DEBUG</div><div class="line">	static char _inMainFilePath[] = __FILE__;</div><div class="line">	static const char *_inIPAddresses[] = &#123;&quot;192.168.83.47&quot;, &quot;127.0.0.1&quot;, 0&#125;;</div><div class="line">	//👆两个声明可加可不加</div><div class="line">	#define INJECTION_ENABLED</div><div class="line">	#import &quot;/tmp/injectionforxcode/BundleInjection.h&quot;</div><div class="line">#endif</div></pre></td></tr></table></figure>
 </li>
-<li><p>Could not codesign as ‘iPhone Developer’:/Users/…<br> <img src="/images/tip_19.png" alt="tip_19 -w300 ">              </p>
-<p> issue图片中写得很清楚了证书到底是图中两个证书里面的哪一个，        解决方法就是修改iOSInjectionProject/x86_64/identity.txt 文件中证书为正确的那一个即可，这样就可以使用    这个插件了😄。<a href="https://github.com/johnno1962/injectionforxcode/issues/41" target="_blank" rel="external">参考</a></p>
+<li><p>Could not codesign as ‘iPhone Developer’:/Users/…<br> <img src="/images/tip_19.png" alt="tip_19 -w300 "><br> issue图片中写得很清楚了证书到底是图中两个证书里面的哪一个，解决方法就是修改        iOSInjectionProject/x86_64/identity.txt 文件中证书为正确的那一个即可，这样就可以使用        这个插件了😄。<a href="https://github.com/johnno1962/injectionforxcode/issues/41" target="_blank" rel="external">参考</a></p>
 </li>
 </ol>
 </li>
-<li><strong>synx 同步iOS工程目录</strong><br>Xcode下面直接创建Group时在本地项目文件夹中并不会形成实体文    件夹，通过synx可以将Group目录同步。使用：<pre><code>1. 安装
+<li><p><strong>synx 同步iOS工程目录</strong><br>Xcode下面直接创建Group时在本地项目文件夹中并不会形成实体文    件夹，通过synx可以将Group目录同步。使用：</p>
+<pre><code>1. 安装
 <figure class="highlight plain"><figcaption><span>gem install synx```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2. 使用</div><div class="line">```synx your path</div></pre></td></tr></table></figure>
-</code></pre></li>
-</ol>
-<pre><code>&gt;     CocoaPods管理的库要重新pod install一次，手动添加的            Framework也要重新添加。
-</code></pre><ol>
+</code></pre><p>CocoaPods管理的库要重新pod install一次，手动添加的Framework也要重新添加。</p>
+</li>
 <li><p>Realm pod install 失败</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[!] /bin/bash -c</div><div class="line">set -e</div><div class="line">sh build.sh cocoapods-setup</div><div class="line"></div><div class="line">core is not a symlink. Deleting...</div><div class="line">Downloading dependency: core 1.0.1</div><div class="line">Downloading core failed:</div><div class="line">curl: (56) SSLRead() return error -36</div></pre></td></tr></table></figure>
 <p>解决方法：</p>

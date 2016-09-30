@@ -61,7 +61,7 @@
     <link href="http://demoker.co/2016/09/29/MicrometerLevelFormat/"/>
     <id>http://demoker.co/2016/09/29/MicrometerLevelFormat/</id>
     <published>2016-09-29T10:21:08.000Z</published>
-    <updated>2016-09-29T10:23:30.000Z</updated>
+    <updated>2016-09-30T03:36:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>##概述：<br>MicrometerLevelFormat是一个对于UITextField实现的数字千分位功能的类别。<a href="https://github.com/demoker/MicrometerLevelFormat" target="_blank" rel="external">链接</a></p>
 <p>##使用方法：<br>1.添加UITextField+MicrometerLevelFormat到项目工程<br>2.在textField delegate方法中打开千分位功能即可，示例代码如下：</p>

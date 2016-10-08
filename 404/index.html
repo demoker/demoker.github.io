@@ -1,0 +1,27 @@
+<script src="/assets/js/DPlayer.min.js"> </script>
+<div id="player1" class="dplayer"></div>
+<script src="dist/DPlayer.min.js"></script><!-- use your path -->
+<script>
+var option = {
+    element: document.getElementById('player1'),                       // Optional, player element
+    autoplay: false,                                                   // Optional, autoplay video, not supported by mobile browsers
+    theme: '#FADFA3',                                                  // Optional, theme color, default: #b7daff
+    loop: true,                                                        // Optional, loop play music, default: true
+    lang: 'zh',                                                        // Optional, language, `zh` for Chinese, `en` for English, default: Navigator language
+    screenshot: true,                                                  // Optional, enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin
+    hotkey: true,                                                      // Optional, binding hot key, including left right and Space, default: true
+    preload: 'auto',                                                   // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    video: {                                                           // Required, video info
+        url: 'http://devtest.qiniudn.com/若能绽放光芒.mp4',                                         // Required, video url
+        pic: 'http://devtest.qiniudn.com/若能绽放光芒.png'                                          // Optional, music picture
+    },
+    danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku
+        id: '9E2E3368B56CDBB4',                                        // Required, danmaku id, NOTICE: it must be unique, can not use these in your new player: `https://dplayer.daoapp.io/list`
+        api: 'https://dplayer.daoapp.io/',                             // Required, danmaku api
+        token: 'tokendemo',                                            // Optional, danmaku token for api
+        maximum: 0                                                  // Optional, maximum quantity of danmaku
+    }
+}
+var dp = new DPlayer(option);
+</script>
+
